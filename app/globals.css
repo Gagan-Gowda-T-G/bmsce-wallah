@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root { --sidebar-width: 240px; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #f0f4ff 0%, #faf5ff 50%, #f0fff4 100%);
+  color: #1e293b;
+  min-height: 100vh;
+}
+
+.logo-watermark {
+  position: fixed; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 650px; height: 650px;
+  pointer-events: none; z-index: 0;
+  background-image: url('/logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.05;
+  animation: pulse-logo 5s ease-in-out infinite;
+}
+
+@keyframes pulse-logo {
+  0%, 100% { opacity: 0.04; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.08; transform: translate(-50%, -50%) scale(1.04); }
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  min-height: 100vh;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(16px);
+  border-right: 1px solid rgba(226,232,240,0.8);
+  position: fixed; top: 0; left: 0; z-index: 40;
+}
+
+.main-content { margin-left: var(--sidebar-width); min-height: 100vh; }
+
+.nav-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 16px; border-radius: 10px;
+  font-size: 14px; font-weight: 500; color: #64748b;
+  cursor: pointer; transition: all 0.15s;
+  text-decoration: none; width: 100%;
+}
+.nav-item:hover { background: #f1f5f9; color: #1e293b; }
+.nav-item.active { background: linear-gradient(135deg, #eff6ff, #f5f3ff); color: #2563eb; font-weight: 600; }
+
+.card {
+  background: rgba(255,255,255,0.95);
+  border: 1px solid rgba(226,232,240,0.8);
+  border-radius: 16px; padding: 20px;
+  transition: all 0.2s;
+}
+.card:hover {
+  border-color: #bfdbfe;
+  box-shadow: 0 4px 20px rgba(37,99,235,0.08);
+  transform: translateY(-1px);
+}
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
