@@ -11,7 +11,7 @@ export default function ChatBot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "Hi there! 👋 I'm Vaibhu!\n\nYour BMSCE WALLAH AI assistant 🤖\n\nAsk me anything about:\n📚 Notes & Subjects\n📝 Question Papers\n🗺️ How to use this portal",
+      content: "Hi there! 👋 I'm Vaibhu!\n\nYour BMSCE WALLAH AI assistant 😄\n\nAsk me anything about:\n📚 Notes & Subjects\n📝 Question Papers\n🗺️ How to use this portal",
     },
   ]);
   const [input, setInput] = useState("");
@@ -90,7 +90,7 @@ export default function ChatBot() {
                 borderRadius: "50%",
                 display: "flex", alignItems: "center", justifyContent: "center",
                 fontSize: "18px"
-              }}>🤖</div>
+              }}>😄</div>
               <div>
                 <div style={{ color: "white", fontWeight: "700", fontSize: "14px" }}>Vaibhu</div>
                 <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
@@ -130,7 +130,7 @@ export default function ChatBot() {
                     borderRadius: "50%",
                     display: "flex", alignItems: "center", justifyContent: "center",
                     fontSize: "14px", flexShrink: 0,
-                  }}>🤖</div>
+                  }}>😄</div>
                 )}
                 <div style={{
                   maxWidth: "75%",
@@ -165,7 +165,7 @@ export default function ChatBot() {
                   borderRadius: "50%",
                   display: "flex", alignItems: "center", justifyContent: "center",
                   fontSize: "14px",
-                }}>🤖</div>
+                }}>😄</div>
                 <div style={{
                   background: "white", padding: "10px 14px",
                   borderRadius: "18px 18px 18px 4px",
@@ -257,7 +257,7 @@ export default function ChatBot() {
           <span style={{ fontSize: "20px" }}>✕</span>
         ) : (
           <>
-            <span style={{ fontSize: "20px" }}>🤖</span>
+            <span style={{ fontSize: "20px" }}>😄</span>
             <span>Vaibhu AI</span>
             {/* Green dot */}
             <span style={{
